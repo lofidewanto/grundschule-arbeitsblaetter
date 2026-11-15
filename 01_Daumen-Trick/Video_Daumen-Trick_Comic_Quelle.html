@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><title>Daumen-Trick Comic</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Andika:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--yel:#ffd93b;--red:#ff4d4d;--blue:#3a7bff;--green:#1fb35a;--skin:#fde0c8;--paper:#fffdf6}
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#fff}
+#stage{position:relative;width:1280px;height:720px;overflow:hidden;font-family:'Comic Neue',sans-serif;color:var(--ink)}
+.bg{position:absolute;inset:0;background:
+  radial-gradient(circle,rgba(0,0,0,.13) 2.2px,transparent 2.6px) 0 0/18px 18px, var(--c,#ffe98a)}
+.scene{position:absolute;inset:0;opacity:0}
+.frame{position:absolute;inset:18px;border:7px solid var(--ink);border-radius:14px;overflow:hidden}
+.title{font-family:'Bangers',cursive;letter-spacing:2px;color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:6px 6px 0 var(--ink)}
+.bubble{position:absolute;background:#fff;border:5px solid var(--ink);border-radius:30px;padding:18px 26px;font-size:34px;line-height:1.2;box-shadow:6px 6px 0 var(--ink)}
+.bubble::after{content:"";position:absolute;width:34px;height:34px;background:#fff;border-right:5px solid var(--ink);border-bottom:5px solid var(--ink);left:var(--tx,40px);bottom:-20px;transform:rotate(45deg) skew(10deg,10deg)}
+.paper{position:absolute;background:var(--paper);border:6px solid var(--ink);border-radius:10px;box-shadow:8px 8px 0 var(--ink);
+  background-image:repeating-linear-gradient(transparent 0 58px,#b9d3ff 58px 61px)}
+.digit{position:absolute;font-family:'Andika',sans-serif;font-weight:700;font-size:110px;line-height:1;color:#1d3fbf}
+.sub{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);max-width:1100px;background:rgba(17,17,17,.86);color:#fff;
+  font-size:27px;padding:10px 22px;border-radius:12px;text-align:center;line-height:1.25}
+.head{position:absolute;top:44px;left:60px;font-size:62px}
+.label{position:absolute;font-family:'Bangers';font-size:40px;letter-spacing:1px;background:var(--yel);border:4px solid var(--ink);padding:4px 16px;border-radius:10px;box-shadow:4px 4px 0 var(--ink)}
+.chk{position:absolute;font-size:70px;font-weight:700}
+.step{position:absolute;top:250px;width:230px;height:250px;background:#fff;border:6px solid var(--ink);border-radius:18px;box-shadow:8px 8px 0 var(--ink);text-align:center;padding-top:22px}
+.step .ic{font-size:80px;display:block}
+.step b{font-family:'Bangers';font-size:42px;letter-spacing:1px;display:block;margin-top:8px}
+.step i{font-style:normal;font-size:24px}
+.arr{position:absolute;top:350px;font-size:56px;font-weight:900;color:var(--green)}
+svg.burst{position:absolute}
+</style></head><body><div id="stage">
+
+<!-- S1 Titel -->
+<div class="scene" id="s1"><div class="bg" style="--c:#7fd3ff"></div>
+  <svg class="burst" id="s1b" viewBox="-100 -100 200 200" style="left:240px;top:60px;width:800px;height:600px">
+    <polygon fill="var(--yel)" stroke="#111" stroke-width="4" points=""/></svg>
+  <div class="title" id="s1t" style="position:absolute;left:0;right:0;top:220px;text-align:center;font-size:130px">DER DAUMEN-TRICK!</div>
+  <div id="s1s" style="position:absolute;left:0;right:0;top:430px;text-align:center;font-size:44px;font-weight:700"><span style="background:#fff;border:5px solid #111;border-radius:40px;padding:6px 26px;box-shadow:5px 5px 0 #111">Zahlen richtig herum schreiben ✏️</span></div>
+  <div id="s1e" style="position:absolute;left:1000px;top:420px;font-size:150px">👍</div>
+</div>
+
+<!-- S2 Problem -->
+<div class="scene" id="s2"><div class="bg" style="--c:#ffd0e0"></div><div class="frame"></div>
+  <div id="kid2" style="position:absolute;left:70px;top:250px"></div>
+  <div class="paper" style="left:520px;top:200px;width:660px;height:330px;transform:rotate(-2deg)">
+    <div class="digit" id="d21" style="left:70px;top:90px">1</div>
+    <div class="digit" id="d22" style="left:250px;top:90px">2</div>
+    <div class="digit" id="d23" style="left:430px;top:90px;transform:scaleX(-1)">3</div>
+  </div>
+  <div class="bubble" id="b2" style="left:300px;top:50px;--tx:60px">Oh nein! Ist die 3 richtig herum? 🤔</div>
+  <div id="q2" style="position:absolute;left:1030px;top:120px;font-family:Bangers;font-size:110px;color:var(--red);-webkit-text-stroke:3px #111">???</div>
+</div>
+
+<!-- S3 Rechtshänder -->
+<div class="scene" id="s3"><div class="bg" style="--c:#c9f5c4"></div><div class="frame"></div>
+  <div class="head title" style="font-size:66px">Du schreibst mit RECHTS ✍️</div>
+  <div class="paper" style="left:150px;top:140px;width:980px;height:390px"></div>
+  <div id="hand3" style="position:absolute;left:260px;top:160px;width:270px"></div>
+  <div class="label" id="lab3" style="left:190px;top:455px">LINKE HAND · flach aufs Blatt</div>
+  <div id="arr3" style="position:absolute;left:580px;top:262px;height:60px;width:0;overflow:visible"></div>
+  <div id="dig3" style="position:absolute;left:600px;top:345px;font-family:Andika;font-weight:700;font-size:80px;color:#1d3fbf;letter-spacing:22px"></div>
+  <div class="label" id="sr3" style="left:800px;top:180px;background:#fff">SCHREIBRICHTUNG</div>
+</div>
+
+<!-- S4 Prüfen -->
+<div class="scene" id="s4"><div class="bg" style="--c:#fff1a8"></div><div class="frame"></div>
+  <div class="head title" style="font-size:66px">Jetzt prüfen! 🔍</div>
+  <div class="paper" style="left:160px;top:150px;width:960px;height:390px">
+    <div class="digit" id="d41" style="left:90px;top:170px">2</div>
+    <div class="digit" id="d42" style="left:320px;top:170px;transform:scaleX(-1)">3</div>
+    <div class="digit" id="d43" style="left:550px;top:170px">5</div>
+    <div class="digit" id="d44" style="left:780px;top:170px">7</div>
+    <div class="digit" id="d42n" style="left:320px;top:40px;color:var(--green)">3</div>
+    <div id="strike" style="position:absolute;left:300px;top:225px;height:12px;width:0;background:var(--red);transform:rotate(-25deg);border-radius:6px"></div>
+    <div class="chk" id="c41" style="left:150px;top:110px;color:var(--green)">✓</div>
+    <div class="chk" id="c42" style="left:390px;top:110px;color:var(--red)">✗</div>
+    <div class="chk" id="c42n" style="left:390px;top:-10px;color:var(--green)">✓</div>
+    <div class="chk" id="c43" style="left:610px;top:110px;color:var(--green)">✓</div>
+    <div class="chk" id="c44" style="left:840px;top:110px;color:var(--green)">✓</div>
+  </div>
+  <div id="mini4" style="position:absolute;right:60px;top:40px;width:120px"></div>
+  <div id="mag" style="position:absolute;top:330px;font-size:120px">🔍</div>
+</div>
+
+<!-- S5 Linkshänder -->
+<div class="scene" id="s5"><div class="bg" style="--c:#ffd8b0"></div><div class="frame"></div>
+  <div class="head title" style="font-size:66px">Du schreibst mit LINKS ✍️</div>
+  <div class="paper" style="left:150px;top:140px;width:980px;height:390px"></div>
+  <div id="hand5" style="position:absolute;left:260px;top:160px;width:270px"></div>
+  <div class="label" id="lab5" style="left:175px;top:455px">RECHTE HAND · Handrücken aufs Blatt</div>
+  <div id="arr5" style="position:absolute;left:580px;top:262px;height:60px;width:0;overflow:visible"></div>
+  <div class="label" id="sr5" style="left:800px;top:180px;background:#fff">SCHREIBRICHTUNG</div>
+  <div id="card5" style="position:absolute;left:840px;top:345px;width:270px;height:170px;background:#fff;border:5px dashed #111;border-radius:16px;text-align:center;padding-top:10px">
+    <div style="font-size:30px">✂️ <b style="font-family:Bangers;font-size:36px">DAUMEN-KARTE</b></div>
+    <div id="cardhand" style="width:80px;margin:4px auto 0"></div>
+  </div>
+</div>
+
+<!-- S6 Kontroll-Code -->
+<div class="scene" id="s6"><div class="bg" style="--c:#b8f0d2"></div><div class="frame"></div>
+  <div class="title" style="position:absolute;left:0;right:0;top:90px;text-align:center;font-size:86px">MEIN KONTROLL-CODE ✅</div>
+  <div class="step" id="st1" style="left:62px"><span class="ic">✏️</span><b>1. FERTIG</b><i>alles geschrieben</i></div>
+  <div class="arr" id="ar1" style="left:300px">➜</div>
+  <div class="step" id="st2" style="left:362px"><span class="ic">✋</span><b>2. HAND</b><i>aufs Blatt legen</i></div>
+  <div class="arr" id="ar2" style="left:600px">➜</div>
+  <div class="step" id="st3" style="left:662px"><span class="ic">👉</span><b>3. DAUMEN</b><i>Richtung prüfen</i></div>
+  <div class="arr" id="ar3" style="left:900px">➜</div>
+  <div class="step" id="st4" style="left:962px"><span class="ic">🔁</span><b>4. VERBESSERN</b><i>neu schreiben</i></div>
+</div>
+
+<!-- S7 Ende -->
+<div class="scene" id="s7"><div class="bg" style="--c:#d6c8ff"></div>
+  <svg class="burst" id="s7b" viewBox="-100 -100 200 200" style="left:430px;top:40px;width:760px;height:560px">
+    <polygon fill="var(--yel)" stroke="#111" stroke-width="4" points=""/></svg>
+  <div id="stars" style="position:absolute;inset:0;pointer-events:none"></div><div id="kid7" style="position:absolute;left:90px;top:200px"></div>
+  <div class="title" id="s7t" style="position:absolute;left:470px;width:680px;top:170px;text-align:center;font-size:150px">SUPER!</div>
+  <div id="s7s" style="position:absolute;left:470px;width:680px;top:380px;text-align:center;font-size:44px;font-weight:700"><span style="background:#fff;border:5px solid #111;border-radius:40px;padding:6px 24px;box-shadow:5px 5px 0 #111">Du bist ein Zahlen-Profi! ⭐</span></div>
+</div>
+
+<div class="sub" id="sub"></div>
+</div>
+<script>
+const SC=[ // [id, dauer, untertitel]
+ ['s1',5.2,'Der Daumen-Trick! So schreibst du deine Zahlen immer richtig herum.'],
+ ['s2',5.5,'Oh nein! Ist die Drei richtig herum? Welche Richtung war das nochmal?'],
+ ['s3',12.0,'Du schreibst mit rechts? Lege deine linke Hand flach aufs Blatt. Dein Daumen zeigt nach rechts – das ist die Schreibrichtung der Zahlen!'],
+ ['s4',8.8,'Prüfe jede Zahl: Schaut sie in Daumen-Richtung? Wenn nicht: durchstreichen und neu schreiben.'],
+ ['s5',11.5,'Du schreibst mit links? Lege die rechte Hand mit dem Handrücken aufs Blatt. Der Daumen zeigt wieder nach rechts! Oder nimm deine Daumen-Karte.'],
+ ['s6',9.2,'Dein Kontroll-Code: 1. fertig schreiben – 2. Hand auflegen – 3. Daumen prüfen – 4. verbessern.'],
+ ['s7',6.0,'Super! Bald brauchst du den Trick gar nicht mehr. Du bist ein Zahlen-Profi!'],
+];
+window.TOTAL=SC.reduce((a,s)=>a+s[1],0);
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const prog=(t,a,d)=>cl((t-a)/d);
+const outBack=x=>{const c=1.9;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+function pop(el,t,a,d=.35,base=''){const p=prog(t,a,d);el.style.opacity=p>0?1:0;el.style.transform=base+` scale(${outBack(p)})`;}
+
+// Comic-Hand: Daumen zeigt nach rechts. mode 'back' = Handrücken sichtbar (Nägel), 'palm' = Handfläche sichtbar (Linien)
+function hand(mode,glowId){
+ const nails=mode==='back'?`<g fill="#fff3ea" stroke="#111" stroke-width="2.5">
+   <ellipse cx="54" cy="64" rx="8" ry="9"/><ellipse cx="82" cy="30" rx="8" ry="9"/><ellipse cx="110" cy="26" rx="8" ry="9"/>
+   <ellipse cx="138" cy="44" rx="8" ry="9"/><ellipse cx="190" cy="108" rx="7" ry="8" transform="rotate(-45 190 108)"/></g>`
+  :`<g fill="none" stroke="#c98b6b" stroke-width="3" stroke-linecap="round"><path d="M60 150 Q100 135 145 145"/><path d="M58 172 Q95 160 130 168"/><path d="M150 140 Q120 175 112 205"/></g>`;
+ return `<svg viewBox="0 0 220 230" style="width:100%;overflow:visible">
+  ${glowId?`<circle id="${glowId}" cx="186" cy="114" r="34" fill="#ffe14d" stroke="#ff9f1c" stroke-width="5" opacity="0"/>`:''}
+  <path fill="var(--skin)" stroke="#111" stroke-width="6" stroke-linejoin="round" d="M40 120 L40 64 Q40 50 54 50 Q68 50 68 64 L68 110 L68 30 Q68 16 82 16 Q96 16 96 30 L96 108 L96 26 Q96 12 110 12 Q124 12 124 26 L124 110 L124 44 Q124 30 138 30 Q152 30 152 44 L152 130 L176 104 Q188 92 200 102 Q210 112 200 124 L160 182 Q146 210 110 212 L80 212 Q40 210 40 168 Z"/>
+  ${nails}</svg>`;
+}
+const ARROW=`<svg viewBox="0 0 400 60" preserveAspectRatio="none" style="width:100%;height:60px;overflow:visible"><path d="M0 30 H360" stroke="#111" stroke-width="22" stroke-linecap="round"/><path d="M0 30 H360" stroke="var(--blue)" stroke-width="12" stroke-linecap="round"/><path d="M340 4 L396 30 L340 56 Z" fill="var(--blue)" stroke="#111" stroke-width="5" stroke-linejoin="round"/></svg>`;
+function kid(mood){
+ const mouth=mood==='happy'?'<path d="M70 118 Q100 150 130 118 Z" fill="#c0392b" stroke="#111" stroke-width="5" stroke-linejoin="round"/>'
+  :'<path d="M78 132 Q100 116 122 132" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>';
+ const brows=mood==='happy'?'':'<path d="M60 72 Q72 62 86 66 M140 72 Q128 62 114 66" stroke="#111" stroke-width="6" stroke-linecap="round"/>';
+ return `<svg viewBox="0 0 200 330" style="width:300px;overflow:visible">
+  <path d="M30 330 Q30 200 100 200 Q170 200 170 330 Z" fill="#ff6b6b" stroke="#111" stroke-width="6"/>
+  <circle cx="22" cy="95" r="26" fill="#8b4a2b" stroke="#111" stroke-width="6"/><circle cx="178" cy="95" r="26" fill="#8b4a2b" stroke="#111" stroke-width="6"/>
+  <circle cx="100" cy="100" r="78" fill="var(--skin)" stroke="#111" stroke-width="6"/>
+  <path d="M24 92 Q30 18 100 20 Q170 18 176 92 Q140 50 100 62 Q60 50 24 92 Z" fill="#8b4a2b" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+  <g class="eyes"><ellipse cx="74" cy="96" rx="9" ry="13" fill="#111"/><ellipse cx="126" cy="96" rx="9" ry="13" fill="#111"/></g>
+  ${brows}<circle cx="58" cy="120" r="10" fill="#ff9a9a" opacity=".7"/><circle cx="142" cy="120" r="10" fill="#ff9a9a" opacity=".7"/>${mouth}
+  ${mood==='happy'?'':'<g transform="translate(160 230) rotate(25)"><rect x="0" y="0" width="16" height="90" fill="#ffd93b" stroke="#111" stroke-width="5"/><path d="M0 90 L8 112 L16 90 Z" fill="#f5c69b" stroke="#111" stroke-width="4"/></g>'}
+ </svg>`;
+}
+function burstPts(n,r1,r2,ph){let p=[];for(let i=0;i<n*2;i++){const r=i%2?r2:r1,a=Math.PI*i/n+ph;p.push((Math.cos(a)*r).toFixed(1)+','+(Math.sin(a)*r).toFixed(1))}return p.join(' ')}
+
+// statische Teile
+$('kid2').innerHTML=kid('worried'); $('kid7').innerHTML=kid('happy');
+$('hand3').innerHTML=hand('back','glow3'); $('hand5').innerHTML=hand('palm','glow5');
+$('mini4').innerHTML=hand('back'); $('cardhand').innerHTML=hand('back');
+$('arr3').innerHTML=ARROW; $('arr5').innerHTML=ARROW;
+let st='';for(let i=0;i<14;i++){st+=`<div class="star" style="position:absolute;left:${((i*97)%1180+40)<420?((i*97)%1180+40)+420:(i*97)%1180+40}px;top:${(i*173)%560+40}px;font-size:${40+(i*13)%40}px">⭐</div>`}
+$('stars').innerHTML=st;
+
+function render(T){
+ let acc=0,idx=SC.length-1;
+ for(let i=0;i<SC.length;i++){if(T<acc+SC[i][1]){idx=i;break}acc+=SC[i][1]}
+ if(idx===SC.length-1&&T>=acc+SC[idx][1])acc=TOTAL-SC[idx][1];
+ const t=T-acc;
+ SC.forEach((s,i)=>{const el=$(s[0]);el.style.opacity=i===idx?1:0});
+ const sc=$(SC[idx][0]); const ip=ease(prog(t,0,.35));
+ sc.style.transform=`scale(${1.08-0.08*ip})`; sc.style.opacity=idx===0?1:ip;
+ const sub=$('sub'); sub.textContent=SC[idx][2]; sub.style.opacity=prog(t,.3,.3);
+ ({s1,s2,s3,s4,s5,s6,s7})[SC[idx][0]](t);
+}
+function s1(t){
+ $('s1b').querySelector('polygon').setAttribute('points',burstPts(16,95,62,t*.25));
+ $('s1b').style.transform=`scale(${outBack(prog(t,0,.5))})`;
+ pop($('s1t'),t,.3,.45,`rotate(${-3+Math.sin(t*3)*1.2}deg)`); pop($('s1s'),t,1.4,.4);
+ pop($('s1e'),t,2.2,.4,`rotate(${Math.sin(t*6)*12}deg)`);
+}
+function s2(t){
+ $('kid2').style.transform=`translateY(${Math.sin(t*4)*4}px)`;
+ [['d21',.3],['d22',.9],['d23',1.5]].forEach(([id,a])=>{const p=prog(t,a,.35);const e=$(id);e.style.opacity=p;e.style.clipPath=`inset(0 ${100-100*p}% 0 0)`});
+ pop($('b2'),t,1.0,.35); pop($('q2'),t,2.4,.35,`rotate(${Math.sin(t*8)*8}deg)`);
+ const d=$('d23'); d.style.color=t>2.4&&Math.floor(t*4)%2?'#ff4d4d':'#1d3fbf';
+}
+function handScene(t,pre,tHand,tThumb,tArr){
+ const hp=outBack(prog(t,tHand,.6));$('hand'+pre).style.transform=`translateY(${(1-hp)*500}px) rotate(${(1-hp)*-20}deg)`;
+ pop($('lab'+pre),t,tHand+.6,.3);
+ const g=$('glow'+pre);const gp=prog(t,tThumb,.3);g.setAttribute('opacity',gp*.9);g.setAttribute('r',34+Math.sin(t*8)*6*gp);
+ const ap=ease(prog(t,tArr,.8));$('arr'+pre).style.width=(ap*420)+'px';$('arr'+pre).style.opacity=ap>0?1:0;
+ pop($('sr'+pre),t,tArr+.6,.35,'rotate(-3deg)');
+}
+function s3(t){
+ handScene(t,'3',2.2,5.6,6.2);
+ const n=Math.floor(cl((t-8.6)/.45,0,5));$('dig3').textContent='12345'.slice(0,n);
+}
+function s4(t){
+ const xs=[90,320,550,780];const mp=ease(prog(t,1.0,3.2));const mx=160+xs[0]+(xs[3]-xs[0])*mp;
+ $('mag').style.left=(mx-10)+'px';$('mag').style.opacity=t>0.8&&t<4.6?1:0;
+ pop($('c41'),t,1.6,.3);pop($('c43'),t,3.0,.3);pop($('c44'),t,3.9,.3);
+ pop($('c42'),t,4.5,.3);
+ $('d42').style.color=t>4.5?'#ff4d4d':'#1d3fbf';
+ $('strike').style.width=(ease(prog(t,5.3,.4))*150)+'px';
+ const np=prog(t,6.2,.5);$('d42n').style.opacity=np;$('d42n').style.clipPath=`inset(0 ${100-100*np}% 0 0)`;
+ pop($('c42n'),t,7.0,.3); $('c42').style.opacity=t>7.0?0:$('c42').style.opacity;
+}
+function s5(t){
+ handScene(t,'5',2.4,6.4,6.9);
+ const cp=outBack(prog(t,8.6,.5));$('card5').style.transform=`translateX(${(1-cp)*600}px) rotate(${4*cp}deg)`;
+}
+function s6(t){
+ [1.9,3.55,5.2,6.85].forEach((a,i)=>{pop($('st'+(i+1)),t,a,.35,`rotate(${[-3,2,-2,3][i]}deg)`);if(i<3)pop($('ar'+(i+1)),t,a+.4,.25)});
+}
+function s7(t){
+ $('s7b').querySelector('polygon').setAttribute('points',burstPts(18,98,66,-t*.3));
+ $('s7b').style.transform=`scale(${outBack(prog(t,0,.5))})`;
+ pop($('s7t'),t,.3,.45,`rotate(${-4+Math.sin(t*4)*2}deg)`);pop($('s7s'),t,1.4,.4);
+ $('kid7').style.transform=`translateY(${-Math.abs(Math.sin(t*5))*30}px)`;
+ document.querySelectorAll('.star').forEach((s,i)=>{const p=prog(t,.6+i*.12,.4);s.style.opacity=p;s.style.transform=`scale(${outBack(p)}) rotate(${t*60+i*30}deg)`});
+}
+window.render=render;
+if(!location.search.includes('rec')){const t0=performance.now();(function loop(){render(((performance.now()-t0)/1000)%TOTAL);requestAnimationFrame(loop)})()}
+</script></body></html>
