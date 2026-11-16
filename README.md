@@ -20,6 +20,24 @@ Kinder lernen, Zahlen richtig herum zu schreiben, und kontrollieren sie selbst: 
 🎬 **Video online ansehen:** https://lofidewanto.github.io/grundschule-arbeitsblaetter/daumen-trick/
 Der QR-Code auf den Arbeitsblättern führt direkt zu dieser Seite.
 
+### 02 · Wer braucht das Laub? 🍂
+
+Erklärvideo (ca. 3 Minuten, für 7-Jährige): Wie Waldtiere das Laub im Herbst und Winter nutzen – Igel (Futter, Nest, Winterschlaf), Waldmaus (Nest, Wärme, Schutz vor Feinden), Eichhörnchen (Futter verstecken, Kobel polstern), Fuchs (Ruheplatz), Wildschwein (Futtersuche, Schlafplatz) und Dachs (Polster im Bau).
+
+| Datei | Beschreibung |
+|---|---|
+| [Video_Waldtiere-und-Laub.mp4](02_Waldtiere-und-Laub/Video_Waldtiere-und-Laub.mp4) | Erklärvideo mit Erzählstimme und Untertiteln |
+
+🎬 **Video online ansehen:** https://lofidewanto.github.io/grundschule-arbeitsblaetter/waldtiere-laub/
+
+Video neu erzeugen (benötigt `edge-tts`, `ffmpeg`, Node.js mit `puppeteer-core` und Google Chrome):
+
+```bash
+cd 02_Waldtiere-und-Laub
+python3 video_ton.py          # Erzählstimme + timeline.js (Text steht im Skript)
+node video_aufnahme.mjs       # Bilder aufnehmen und mit Ton zu MP4 zusammenfügen
+```
+
 ## Arbeitsblätter neu erzeugen
 
 Die Arbeitsblätter werden aus [`01_Daumen-Trick/build.py`](01_Daumen-Trick/build.py) als HTML erzeugt und mit Chrome als PDF gedruckt. Der QR-Code liegt in `01_Daumen-Trick/qr.svg`.
